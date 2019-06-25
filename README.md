@@ -1,28 +1,23 @@
-## 环境依赖
+This is a linux system resources monitor builded mainly on top of `psutil` and `py3nvml`. The tool supports CPU utilization, Memory, disk IO and GPU utilization.
 
-- python版本：python 3.6 及以上
-- python依赖库：
+## Dependency
+
+- python >= 3.6
+- python dependency：
     - matplotlib
     - pandas
     - psutil
     - py3nvml
-- 依赖系统工具：
-    - iotop
-    - nvidia-smi
-    - top
 
-## 权限说明
-普通用户权限执行即可。
+## Usage
 
-## 使用说明
-
-### 清除缓存
+### script for clearing memory buffer
 
 ```
 ./clear_buffers.sh
 ```
 
-### 运行监控
+### start monitor
 
 ```shell
 usage: monitor_main.py [-h] [--duration DURATION]
@@ -41,16 +36,16 @@ optional arguments:
                         signal frequence(default: 1.6Hz)
 ```
 
-举例说明：
+for example:
 
 ```shell
 python monitor_main.py --duration 60 --target-gpu 0 1 2 3 4
 ```
 
 
-## 结果查看
-- log.txt  数据文件
-- log_visualization/log.png  数据可视化
+## log example
+- log.csv
+- log_visualization/
 
-## 可视化效果图
-![](log.png)
+## log visualiztion example
+![](log_visualization/cpu_utils.png)

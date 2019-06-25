@@ -106,14 +106,3 @@ def draw_box(filename, output_path, **data_dict):
     
     plt.savefig(os.path.join(output_path, filename), dpi=400, quality=100)
     plt.clf()
-
-
-# for unit testing
-if __name__ == '__main__':
-    import argparse
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--proc-name', type=str)
-    args = parser.parse_args()
-
-    get_pid(args.proc_name)
